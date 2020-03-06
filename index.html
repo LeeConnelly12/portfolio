@@ -6,35 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lee Connelly - Web Developer</title>
   <link rel="stylesheet" href="dist/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 </head>
 
-<body class="font-sans text-gray-700 mt-16 antialiased">
+<body class="font-body text-gray-700 mt-20 antialiased">
 
-  <!-- Nav -->
-  <nav class="fixed top-0 w-full h-16 bg-gray-400 px-4 flex justify-between items-center">
-    <h1>Lee Connelly</h1>
-    <h2>Hamburger</h2>
+  <nav class="fixed top-0 w-full h-24 bg-gray-800 fixed top-0">
+    <div class="container mx-auto px-4 h-full flex justify-between items-center pt-6 pb-8">
+      <a href="/">
+        <h1 class="text-gray-200 text-xl">Lee<strong class="text-blue-400">Connelly</strong></h1>
+      </a>
+      <button class="text-gray-200" type="button">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+          <path
+            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+        </svg>
+      </button>
+    </div>
+    <svg class="w-full block mx-auto -mt-3" style="height: 4vw" width="2339" height="287" viewBox="0 0 2339 287" fill="none" preserveAspectRatio="none">
+      <path d="M0 287L1.00021 162H2339V287H0Z" fill="#EDF2F7"/>
+      <path d="M2339 162H1L2339 0.5V162Z" fill="#63B3ED"/>
+    </svg>      
   </nav>
 
-  <!-- About -->
-  <section class="text-center px-4 py-6" id="about">
-    <h2 class="mb-2">About me</h2>
+  <section class="text-center px-4 py-12" id="about">
+    <h2 class="mb-2 text-base">About me</h2>
     <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam soluta nisi esse, natus accusamus
       consequuntur maxime eaque repellat dolores id!</p>
   </section>
 
-  <!-- Projects -->
-  <section class="text-center px-4 py-6" id="projects">
-    <h2 class="mb-2">Projects</h2>
-    <article class="bg-gray-400 w-full h-48 mb-6"></article>
-    <article class="bg-gray-400 w-full h-48 mb-6"></article>
-    <article class="bg-gray-400 w-full h-48"></article>
+  <section class="bg-gray-300 text-center px-4 pt-10 pb-6" id="projects">
+    <h2 class="mb-2 text-base">Projects</h2>
+    <article class="w-full mb-6 rounded-sm overflow-hidden" style="background-color: #369ecc">
+      <img src="./images/projects/atoz/atoz.png" alt="">
+      <div class="px-8 py-4 text-white text-left">
+        <h2 class="text-lg font-bold opacity-75">A to Z</h2>
+        <p class="text-base opacity-75">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In eos praesentium,
+          impedit nobis eaque nam.</p>
+      </div>
+    </article>
+    <article class="bg-gray-400 w-full mb-6"></article>
+    <article class="bg-gray-400 w-full"></article>
   </section>
 
-  <!-- Contact -->
   <footer class="text-center px-4 pt-6 pb-10" id="contact">
-    <h2 class="mb-2">Contact</h2>
-    <a href="mailto:lee@leeconnelly.dev">lee@leeconnelly.dev</a>
+    <h2 class="mb-2 text-base">Contact</h2>
+    <a class="text-lg" href="mailto:lee@leeconnelly.dev">lee@leeconnelly.dev</a>
   </footer>
 
 </body>
