@@ -16,7 +16,6 @@
     "autoprefixer": "^9.7.4",
     "html-critical-webpack-plugin": "^2.1.0",
     "postcss": "^7.0.27",
-    "postcss-discard-comments": "^4.0.2",
     "tailwindcss": "^1.2.0",
     "webpack": "^4.42.0"
   },

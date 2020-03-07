@@ -8,11 +8,7 @@ module.exports = env => {
     plugins: [
       require('tailwindcss'),
       require('autoprefixer'),
-      env.webpack.mode === 'production' && purgecss,
-      env.webpack.mode === 'production' && 
-        require('postcss-discard-comments')({
-          removeAll: true
-        })
+      env.webpack.mode === 'production' && purgecss
     ]
   }
 }
