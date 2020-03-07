@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^9.7.4",
+    "html-critical-webpack-plugin": "^2.1.0",
     "postcss": "^7.0.27",
     "postcss-discard-comments": "^4.0.2",
     "tailwindcss": "^1.2.0",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.0",
     "clean-webpack-plugin": "^3.0.0",
+    "critical": "^1.3.9",
     "cross-env": "^7.0.2",
     "css-loader": "^3.4.2",
     "html-webpack-plugin": "^3.2.0",

@@ -1,39 +1,47 @@
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlCriticalPlugin = require("html-critical-webpack-plugin")
 
-module.exports = {
-  entry: './src/index.js',
-  devServer: {
-    contentBase: './dist',
-  },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-    }),
-  ],
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        exclude: '/node_modules/',
-        use: [
-          {
-            loader: 'style-loader',
-            options: {
-              insert: 'head',
-              injectType: 'singletonStyleTag'
-            }
-          },
-          'css-loader',
-          'postcss-loader'
-        ],
-      },
-    ],
-  },
+module.exports = (env, argv) => {
+  return {
+    entry: './src/index.js',
+    plugins: [
+      new CleanWebpackPlugin(),
+      new HtmlWebpackPlugin({
+        template: 'src/index.html',
+        inject: argv.mode !== 'production'
+      }),
+      new MiniCssExtractPlugin(),
+      ...argv.mode === 'production' ? [new HtmlCriticalPlugin({
+        base: path.join(path.resolve(__dirname), 'dist/'),
+        src: 'index.html',
+        dest: 'index.html',
+        inline: true,
+        minify: true,
+        // extract: true,
+      })] : []
+    ].filter(Boolean),
+    output: {
+      filename: 'bundle.js',
+      path: path.resolve(__dirname, 'dist'),
+    },
+    devServer: {
+      contentBase: './dist',
+    },
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          exclude: '/node_modules/',
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'postcss-loader'
+          ],
+        },
+      ],
+    },
+  }
 };

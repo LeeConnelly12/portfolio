@@ -3,13 +3,13 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 })
 
-module.exports = ctx => {
+module.exports = env => {
   return {
     plugins: [
       require('tailwindcss'),
       require('autoprefixer'),
-      ctx.webpack.mode === 'production' && purgecss,
-      ctx.webpack.mode === 'production' && 
+      env.webpack.mode === 'production' && purgecss,
+      env.webpack.mode === 'production' && 
         require('postcss-discard-comments')({
           removeAll: true
         })
