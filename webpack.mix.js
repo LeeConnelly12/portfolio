@@ -14,3 +14,7 @@ mix.postCss('css/app.css', 'dist', [
   .version()
   .sourceMaps()
   .setPublicPath('dist')
+
+if (mix.inProduction()) {
+  mix.copy('index.html', 'dist/index.html')
+}
