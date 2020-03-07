@@ -11,7 +11,7 @@ module.exports = (env, argv) => {
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: 'src/index.html',
-        inject: argv.mode !== 'production'
+        inject: argv.mode === 'development'
       }),
       new MiniCssExtractPlugin(),
       ...argv.mode === 'production' ? [new HtmlCriticalPlugin({
@@ -20,7 +20,6 @@ module.exports = (env, argv) => {
         dest: 'index.html',
         inline: true,
         minify: true,
-        // extract: true,
       })] : []
     ].filter(Boolean),
     output: {
