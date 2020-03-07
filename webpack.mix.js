@@ -1,7 +1,7 @@
 const mix = require('laravel-mix')
 const purgecss = require('@fullhuman/postcss-purgecss')
 
-mix.postCss('css/app.css', 'dist', [
+mix.postCss('css/app.css', 'dist/css', [
   require('tailwindcss'),
   ...mix.inProduction() ? [
     purgecss({
