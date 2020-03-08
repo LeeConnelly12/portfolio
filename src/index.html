@@ -1,80 +1,94 @@
 <!DOCTYPE html>
-<html class="h-full bg-gray-200" lang="en">
+<html class="h-full bg-gray-100" lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lee Connelly - Web Developer</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet"> 
 </head> 
  
-<body class="min-h-full flex flex-col font-body text-gray-700 pt-24 antialiased">
+<body class="min-h-full flex flex-col font-body text-gray-700 pt-24 md:pt-40 antialiased tracking-wide">
 
-  <nav class="fixed top-0 w-full h-20 bg-gray-800 top-0 z-10">
-    <div class="container mx-auto px-6 h-full flex justify-between items-center">
+  <header class="fixed top-0 w-full h-20 sm:h-24 md:h-32 bg-gray-800 top-0 z-10">
+    <div class="container mx-auto px-6 h-full flex justify-between items-center md:max-w-6xl" style="padding-top: 1vw">
       <a href="/">
-        <h1 class="text-gray-200 text-2xl">Lee<strong class="text-blue-400">Connelly</strong></h1>
+        <h1 class="text-gray-200 text-2xl tracking-normal">Lee<strong class="text-blue-400">Connelly</strong></h1>
       </a>
-      <button class="text-gray-200" type="button">
+      <button class="text-gray-200 md:hidden" type="button">
         <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
           <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
         </svg>
       </button>
+      <nav class="hidden md:block text-gray-500 font-semibold">
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#projects" class="ml-12 hover:text-white">Projects</a>
+        <a href="#contact" class="ml-12 hover:text-white">Contact</a>
+      </nav>
     </div>
-    <svg class="w-full" width="2338" height="162" style="height: 3vw" viewBox="0 0 2338 162" fill="none" preserveAspectRatio="none">
+    <svg class="w-full" width="2338" height="162" style="height: 2vw" viewBox="0 0 2338 162" fill="none" preserveAspectRatio="none">
       <path d="M2338 161.5H0L2338 0V161.5Z" fill="#63B3ED" />
       <path d="M0 0H2338L0 161V0Z" fill="#2D3748" />
     </svg>
-  </nav>
+  </header>
 
-  <section class="text-center px-6 pt-10 pb-12" id="about">
-    <h2 class="mb-2 text-base">About me</h2>
-    <p class="text-lg">
+  <section class="container md:max-w-3xl mx-auto text-center sm:text-left px-6 pt-10 pb-12 sm:py-16 md:pb-20 lg:pt-20" id="about">
+    <h2 class="mb-2 md:mb-3 lg:mb-6 text-base sm:text-3xl md:text-4xl lg:text-5xl">About me</h2>
+    <p class="text-lg sm:text-xl">
       Hi! My name is Lee Connelly. I am a web developer living in the UK. I build apps with Laravel and Vue, and make custom themes for Wordpress websites.
     </p>
   </section>
 
-  <section class="bg-gray-300 text-center px-6 pt-10 pb-6" id="projects">
-    <h2 class="mb-2 text-base">Projects</h2>
-    <p class="text-lg mb-3">These are some of the projects I have worked on.</p>
-
-    <article class="w-full mb-6 rounded-sm overflow-hidden text-white" style="background-color: #369ecc">
-      <!-- <img src="/images/projects/atoz/atoz.png" alt=""> -->
-      <div class="px-8 py-4 text-left">
-        <h2 class="text-lg font-bold opacity-75">A to Z</h2>
-        <p class="text-base opacity-75">
-          A to Z is a web app where clients can login to either post a job for an interpreter to complete or upload a document they need translating. I built this app with Laravel and Vue.
-        </p>
+  <section class="bg-gray-200 text-center sm:text-left pt-10 pb-4 sm:pt-12" id="projects">
+    <div class="container md:max-w-3xl mx-auto px-6">
+      <h2 class="mb-2 md:mb-3 lg:mb-6 text-base sm:text-3xl md:text-4xl lg:text-5xl">Projects</h2>
+      <p class="text-lg sm:text-xl mb-6">These are some of the projects I have worked on.</p>
+  
+      <div class="lg:-mx-12">
+        <article class="w-full mb-6 sm:mb-10 md:mb-12 rounded-sm overflow-hidden text-white" style="background-color: #369ecc">
+          <a href="https://portal.atozinterpreting.com">
+            <img src="" alt="A to Z - Web App" id="atoz">
+          </a>
+          <div class="px-6 py-6 text-left">
+            <h2 class="text-xl font-bold">A to Z</h2>
+            <p class="text-sm opacity-75">
+              A to Z is a web app where clients can login to either post a job for an interpreter to complete or upload a document they need translating. I built this app with Laravel and Vue.
+            </p>
+          </div>
+        </article>
+    
+        <article class="w-full mb-6 sm:mb-10 md:mb-12 rounded-sm overflow-hidden text-white" style="background-color: #221c35">
+          <a href="https://wearestadium.com">
+            <img src="" alt="Stadium - Wordpress Website" id="stadium">
+          </a>
+          <div class="px-6 py-6 text-left">
+            <h2 class="text-xl font-bold">Stadium</h2>
+            <p class="text-sm opacity-75">
+              Stadium is a Wordpress website that was part of a client's rebranding process. The new website also required an integration with talentvine job's API to retrieve available vacancies.
+            </p>
+          </div>
+        </article>
+    
+        <article class="w-full mb-6 sm:mb-10 md:mb-12 rounded-sm overflow-hidden text-white" style="background-color: #56af31">
+          <a href="https://gasdata.co.uk">
+            <img src="" alt="Gas Data - Wordpress Website" id="gasData">
+          </a>
+          <div class="px-6 py-6 text-left">
+            <h2 class="text-xl font-bold">Gas Data</h2>
+            <p class="text-sm opacity-75">
+              Gas Data, a Wordpress website. The client wanted a more modern and responsive website.
+            </p>
+          </div>
+        </article>
       </div>
-    </article>
-
-    <article class="w-full mb-6 rounded-sm overflow-hidden text-white" style="background-color: #221c35">
-      <!-- <img src="../images/projects/atoz/atoz.png" alt=""> -->
-      <div class="px-8 py-4 text-left">
-        <h2 class="text-lg font-bold opacity-75">Stadium</h2>
-        <p class="text-base opacity-75">
-          Stadium, a Wordpress website. I needed to integrate with talentvine job's API to retrieve the latest vacancies.
-        </p>
-      </div>
-    </article>
-
-    <article class="w-full mb-6 rounded-sm overflow-hidden text-white" style="background-color: #56af31">
-      <!-- <img src="../images/projects/atoz/atoz.png" alt=""> -->
-      <div class="px-8 py-4 text-left">
-        <h2 class="text-lg font-bold opacity-75">Gas Data</h2>
-        <p class="text-base opacity-75">
-          Gas Data, a Wordpress website. The client wanted a more modern and responsive website.
-        </p>
-      </div>
-    </article>
-
+    </div>
   </section>
 
-  <footer class="mt-auto text-center px-6 pt-6 pb-8" id="contact">
-    <h2 class="mb-2 text-base">Contact</h2>
-    <p class="text-lg mb-1">Have a question or want to work together?</p>
-    <p class="text-lg mb-1">You can email me at</p>
-    <a class="text-lg text-blue-400 font-bold" href="mailto:leeconnelly12@gmail.com">leeconnelly12@gmail.com</a>
+  <footer class="container md:max-w-3xl mt-auto mx-auto text-center px-6 pt-6 md:pt-8 pb-8 sm:pb-10 md:pb-12" id="contact">
+    <h2 class="mb-2 md:mb-3 lg:mb-6 text-base sm:text-3xl md:text-4xl lg:text-5xl">Contact</h2>
+    <p class="text-lg sm:text-xl mb-1">Have a question or want to work together?</p>
+    <p class="text-lg sm:text-xl mb-1">You can email me at</p>
+    <a class="text-lg sm:text-xl text-blue-400 font-bold" href="mailto:leeconnelly12@gmail.com">leeconnelly12@gmail.com</a>
   </footer>
 
 </body>
