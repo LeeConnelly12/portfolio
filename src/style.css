@@ -20,6 +20,13 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .offset-anchor {
+    border-top: 170px solid transparent;
+    margin: -170px 0 0;
+  }
+}
+
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
