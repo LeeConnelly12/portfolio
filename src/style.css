@@ -1,5 +1,25 @@
 @import "tailwindcss/base";
 
+.offset-anchor {
+  border-top: 90px solid transparent;
+  margin: -90px 0 0;
+  background-clip: padding-box;
+}
+
+@media (min-width: 640px) {
+  .offset-anchor {
+    border-top: 105px solid transparent;
+    margin: -105px 0 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .offset-anchor {
+    border-top: 140px solid transparent;
+    margin: -140px 0 0;
+  }
+}
+
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";

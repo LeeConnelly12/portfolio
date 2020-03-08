@@ -8,18 +8,27 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet"> 
 </head> 
  
-<body class="min-h-full flex flex-col font-body text-gray-700 pt-24 md:pt-40 antialiased tracking-wide">
+<body class="min-h-full font-body text-gray-700 pt-24 md:pt-40 antialiased tracking-wide">
 
   <header class="fixed top-0 w-full h-20 sm:h-24 md:h-32 bg-gray-800 top-0 z-10">
     <div class="container mx-auto px-6 h-full flex justify-between items-center md:max-w-6xl" style="padding-top: 1vw">
       <a href="/">
         <h1 class="text-gray-200 text-2xl tracking-normal">Lee<strong class="text-blue-400">Connelly</strong></h1>
       </a>
-      <button class="text-gray-200 md:hidden" type="button">
-        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-          <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
-        </svg>
-      </button>
+      <div class="relative md:hidden">
+        <button class="focus:outline-none text-gray-200" type="button" id="hamburger" data-opens="mobileMenu">
+          <svg class="w-6 h-6 fill-current text-gray-500 hover:text-white" viewBox="0 0 24 24">
+            <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+          </svg>
+        </button>
+        <div class="hidden bg-white rounded shadow-lg absolute right-0 py-4 px-8 mt-1" id="mobileMenu">
+          <ul>
+            <a href="#about" class="inline-block hover:text-blue-400">About</a>
+            <a href="#projects" class="inline-block mt-2 hover:text-blue-400">Projects</a>
+            <a href="#contact" class="inline-block mt-2 hover:text-blue-400">Contact</a>
+          </ul>
+        </div>
+      </div>
       <nav class="hidden md:block text-gray-500 font-semibold">
         <a href="#about" class="hover:text-white">About</a>
         <a href="#projects" class="ml-12 hover:text-white">Projects</a>
@@ -32,14 +41,14 @@
     </svg>
   </header>
 
-  <section class="container md:max-w-3xl mx-auto text-center sm:text-left px-6 pt-10 pb-12 sm:py-16 md:pb-20 lg:pt-20" id="about">
+  <section class="container md:max-w-3xl mx-auto text-center sm:text-left px-6 pt-10 pb-12 sm:py-16 md:pb-20 lg:pt-20 offset-anchor" id="about">
     <h2 class="mb-2 md:mb-3 lg:mb-6 text-base sm:text-3xl md:text-4xl lg:text-5xl">About me</h2>
     <p class="text-lg sm:text-xl">
       Hi! My name is Lee Connelly. I am a web developer living in the UK. I build apps with Laravel and Vue, and make custom themes for Wordpress websites.
     </p>
   </section>
 
-  <section class="bg-gray-200 text-center sm:text-left pt-10 pb-4 sm:pt-12" id="projects">
+  <section class="bg-gray-200 text-center sm:text-left pt-10 pb-4 sm:pt-12 offset-anchor" id="projects">
     <div class="container md:max-w-3xl mx-auto px-6">
       <h2 class="mb-2 md:mb-3 lg:mb-6 text-base sm:text-3xl md:text-4xl lg:text-5xl">Projects</h2>
       <p class="text-lg sm:text-xl mb-6">These are some of the projects I have worked on.</p>
@@ -84,7 +93,7 @@
     </div>
   </section>
 
-  <footer class="container md:max-w-3xl mt-auto mx-auto text-center px-6 pt-6 md:pt-8 pb-8 sm:pb-10 md:pb-12" id="contact">
+  <footer class="container md:max-w-3xl mx-auto text-center px-6 pt-6 md:pt-8 pb-8 sm:pb-10 md:pb-12 offset-anchor" id="contact">
     <h2 class="mb-2 md:mb-3 lg:mb-6 text-base sm:text-3xl md:text-4xl lg:text-5xl">Contact</h2>
     <p class="text-lg sm:text-xl mb-1">Have a question or want to work together?</p>
     <p class="text-lg sm:text-xl mb-1">You can email me at</p>
