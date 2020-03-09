@@ -27,6 +27,14 @@
   }
 }
 
+.hover-up {
+  transform: translateY(0);
+}
+
+.hover-up:hover {
+  transform: translateY(-1px);
+}
+
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
