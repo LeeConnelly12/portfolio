@@ -1,10 +1,11 @@
 module.exports = {
-  theme: {
-    fontFamily: {
-      'body': ['Open Sans'],
+    content: ['./src/index.html', './src/js/**/*.js'],
+    theme: {
+        fontFamily: {
+            'body': ['Open Sans'],
+        },
+        extend: {},
     },
-    extend: {},
-  },
-  variants: {},
-  plugins: []
+    variants: {},
+    plugins: []
 }

@@ -1,4 +1,4 @@
-@import "tailwindcss/base";
+@tailwind base;
 
 .offset-anchor {
   border-top: 90px solid transparent;
@@ -35,6 +35,5 @@
   transform: translateY(-1px);
 }
 
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
+@tailwind components;
+@tailwind utilities;
