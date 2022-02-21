@@ -11,31 +11,31 @@
   <script src="script.js" defer></script>
 </head> 
  
-<body class="min-h-full font-body text-gray-700 pt-24 md:pt-40 antialiased tracking-wide">
+<body class="min-h-full pt-24 antialiased tracking-wide text-gray-700 font-body md:pt-40">
 
-  <header class="fixed top-0 w-full h-20 sm:h-24 md:h-32 bg-gray-800 top-0 z-10">
+  <header class="fixed top-0 z-10 w-full h-20 bg-gray-800 sm:h-24 md:h-32">
     <div class="container mx-auto px-6 h-full flex justify-between items-center md:max-w-6xl pt-[1vw]">
       <a class="hover-up" href="/">
-        <h1 class="text-gray-200 text-2xl tracking-normal">Lee<strong class="text-blue-400">Connelly</strong></h1>
+        <h1 class="text-2xl tracking-normal text-gray-200">Lee<strong class="text-blue-400">Connelly</strong></h1>
       </a>
       <div class="relative md:hidden">
-        <button class="focus:outline-none text-gray-200" type="button" id="hamburger" data-opens="mobileMenu">
-          <svg class="w-6 h-6 fill-current text-gray-500 hover:text-white" viewBox="0 0 24 24">
+        <button class="text-gray-200 focus:outline-none" type="button" id="hamburger" data-opens="mobileMenu">
+          <svg class="w-6 h-6 text-gray-500 fill-current hover:text-white" viewBox="0 0 24 24">
             <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
           </svg>
         </button>
-        <div class="hidden bg-white rounded shadow-lg absolute right-0 py-4 px-8 mt-1" id="mobileMenu">
+        <div class="absolute right-0 hidden px-8 py-4 mt-1 bg-white rounded shadow-lg" id="mobileMenu">
           <ul>
-            <a href="#about" class="inline-block hover:text-blue-400 tracking-wider">About</a>
-            <a href="#projects" class="inline-block mt-2 hover:text-blue-400 tracking-wider">Projects</a>
-            <a href="#contact" class="inline-block mt-2 hover:text-blue-400 tracking-wider">Contact</a>
+            <a href="#about" class="inline-block tracking-wider hover:text-blue-400">About</a>
+            <a href="#projects" class="inline-block mt-2 tracking-wider hover:text-blue-400">Projects</a>
+            <a href="#contact" class="inline-block mt-2 tracking-wider hover:text-blue-400">Contact</a>
           </ul>
         </div>
       </div>
-      <nav class="hidden md:block text-gray-500 font-semibold">
-        <a href="#about" class="hover:text-white tracking-wider">About</a>
-        <a href="#projects" class="ml-12 hover:text-white tracking-wider">Projects</a>
-        <a href="#contact" class="ml-12 hover:text-white tracking-wider">Contact</a>
+      <nav class="hidden font-semibold text-gray-500 md:block">
+        <a href="#about" class="tracking-wider hover:text-white">About</a>
+        <a href="#projects" class="ml-12 tracking-wider hover:text-white">Projects</a>
+        <a href="#contact" class="ml-12 tracking-wider hover:text-white">Contact</a>
       </nav>
     </div>
     <svg class="w-full h-[2vw]" width="2338" height="162" viewBox="0 0 2338 162" fill="none" preserveAspectRatio="none">
@@ -44,21 +44,21 @@
     </svg>
   </header>
 
-  <section class="container md:max-w-3xl mx-auto text-center sm:text-left px-6 pt-10 pb-12 sm:py-16 md:pb-20 lg:pt-20 offset-anchor" id="about">
-    <h2 class="mb-2 md:mb-3 lg:mb-6 text-base sm:text-3xl md:text-4xl lg:text-5xl">About me</h2>
+  <section class="container px-6 pt-10 pb-12 mx-auto text-center md:max-w-3xl sm:text-left sm:py-16 md:pb-20 lg:pt-20 offset-anchor" id="about">
+    <h2 class="mb-2 text-base md:mb-3 lg:mb-6 sm:text-3xl md:text-4xl lg:text-5xl">About me</h2>
     <p class="mb-3 text-lg sm:text-xl">
       Hi! My name is Lee Connelly. I am a web developer living in the UK. I build apps with Laravel and Vue, and make custom Wordpress websites.
     </p>
     <p class="text-lg sm:text-xl">
       You can view the code for this site on my github 
-      <a class="text-lg sm:text-xl text-blue-400 font-bold" href="https://github.com/LeeConnelly12/portfolio">here</a>
+      <a class="text-lg font-bold text-blue-400 sm:text-xl" href="https://github.com/LeeConnelly12/portfolio">here</a>
     </p>
   </section>
 
-  <section class="bg-gray-200 text-center sm:text-left pt-10 pb-4 sm:pt-12 md:pb-10 offset-anchor" id="projects">
-    <div class="container md:max-w-3xl mx-auto px-6">
-      <h2 class="mb-2 md:mb-3 lg:mb-6 text-base sm:text-3xl md:text-4xl lg:text-5xl">Projects</h2>
-      <p class="text-lg sm:text-xl mb-6">These are some of the projects I have worked on.</p>
+  <section class="pt-10 pb-4 text-center bg-gray-200 sm:text-left sm:pt-12 md:pb-10 offset-anchor" id="projects">
+    <div class="container px-6 mx-auto md:max-w-3xl">
+      <h2 class="mb-2 text-base md:mb-3 lg:mb-6 sm:text-3xl md:text-4xl lg:text-5xl">Projects</h2>
+      <p class="mb-6 text-lg sm:text-xl">These are some of the projects I have worked on.</p>
       <div class="lg:-mx-12">
 
         <article class="mb-6 sm:mb-10 md:mb-12 rounded-sm md:rounded overflow-hidden text-white md:flex md:h-56 lg:h-64 bg-[#369ecc]">
@@ -67,7 +67,7 @@
               <img class="md:rounded-t md:shadow-2xl" src="images/atoz.jpg" alt="A to Z - Web App" id="atoz" loading="lazy">
             </a>
           </div>
-          <div class="text-left px-6 pt-8 pb-6 md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
+          <div class="px-6 pt-8 pb-6 text-left md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
             <h2 class="text-xl font-bold lg:mb-2">A to Z</h2>
             <p class="text-sm opacity-75">
               A to Z is a web app where users can login to post a jobs for interpreters to complete. interpreters can then login to accept or reject jobs they have been matched with.
@@ -81,7 +81,7 @@
               <img class="md:rounded-t md:shadow-2xl" src="images/stadium.jpg" alt="Stadium - Wordpress Website" id="stadium" loading="lazy">
             </a>
           </div>
-          <div class="text-left px-6 pt-8 pb-6 md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
+          <div class="px-6 pt-8 pb-6 text-left md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
             <h2 class="text-xl font-bold lg:mb-2">Stadium</h2>
             <p class="text-sm opacity-75">
               Stadium is a Wordpress website that was part of a client's rebranding process. The new website also required an integration with talentvine job's API to retrieve available vacancies.
@@ -95,7 +95,7 @@
               <img class="md:rounded-t md:shadow-2xl" src="images/gasdata.jpg" alt="Gas Data - Wordpress Website" id="gasData" loading="lazy">
             </a>
           </div>
-          <div class="text-left px-6 pt-8 pb-6 md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
+          <div class="px-6 pt-8 pb-6 text-left md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
             <h2 class="text-xl font-bold lg:mb-2">Gas Data</h2>
             <p class="text-sm opacity-75">
               Gas Data, a Wordpress website. The client wanted a more modern and responsive website along with some animations.
@@ -109,7 +109,7 @@
               <img class="md:rounded-t md:shadow-2xl" src="images/clubglobal.jpg" alt="Club Global - Vue App" id="clubGlobal" loading="lazy">
             </a>
           </div>
-          <div class="text-left px-6 pt-8 pb-6 md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
+          <div class="px-6 pt-8 pb-6 text-left md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
             <h2 class="text-xl font-bold lg:mb-2">Club Global</h2>
             <p class="text-sm opacity-75">
               Club Global is an app where users can login to book tables or buy tickets for events at clubs. Users can also check the availablity of a date by selecting from a calendar.
@@ -123,7 +123,7 @@
               <img class="md:rounded-t md:shadow-2xl" src="images/plenish.jpg" alt="Plenish Drinks" id="plenish" loading="lazy">
             </a>
           </div>
-          <div class="text-left px-6 pt-8 pb-6 md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
+          <div class="px-6 pt-8 pb-6 text-left md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
             <h2 class="text-xl font-bold lg:mb-2">Plenish</h2>
             <p class="text-sm opacity-75">
               Plenish is a company that sells healthy plant-based drinks.
@@ -137,7 +137,7 @@
               <img class="md:rounded-t md:shadow-2xl" src="images/fitzgerald.jpg" alt="Fitzgerald - Wordpress Website" id="fitzgerald" loading="lazy">
             </a>
           </div>
-          <div class="text-left px-6 pt-8 pb-6 md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
+          <div class="px-6 pt-8 pb-6 text-left md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
             <h2 class="text-xl font-bold lg:mb-2">Fitzgerald</h2>
             <p class="text-sm opacity-75">
               Fitzgerald is a civil engineering contractor based in Birmingham, the client wanted a website in order to increase their online presence.
@@ -149,11 +149,11 @@
     </div>
   </section>
 
-  <footer class="container md:max-w-3xl mx-auto text-center px-6 pt-6 md:pt-8 pb-8 sm:pb-10 md:pb-12 lg:pb-16 offset-anchor" id="contact">
-    <h2 class="mb-2 md:mb-3 lg:mb-6 text-base sm:text-3xl md:text-4xl lg:text-5xl">Contact</h2>
-    <p class="text-lg sm:text-xl mb-1">Have a question or want to work together?</p>
-    <p class="text-lg sm:text-xl mb-1">You can email me at</p>
-    <a class="text-lg sm:text-xl text-blue-400 font-bold" href="mailto:lee@leeconnelly.dev">lee@leeconnelly.dev</a>
+  <footer class="container px-6 pt-6 pb-8 mx-auto text-center md:max-w-3xl md:pt-8 sm:pb-10 md:pb-12 lg:pb-16 offset-anchor" id="contact">
+    <h2 class="mb-2 text-base md:mb-3 lg:mb-6 sm:text-3xl md:text-4xl lg:text-5xl">Contact</h2>
+    <p class="mb-1 text-lg sm:text-xl">Have a question or want to work together?</p>
+    <p class="mb-1 text-lg sm:text-xl">You can email me at</p>
+    <a class="text-lg font-bold text-blue-400 sm:text-xl" href="mailto:lee@leeconnelly.dev">lee@leeconnelly.dev</a>
   </footer>
 
 </body>
