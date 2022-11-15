@@ -2,12 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
+    <title>Lee Connelly - Web Developer</title>
     <script type="module" src="/main.js"></script>
+  </head>
+  <body class="min-h-full pt-24 antialiased text-gray-700 font-body md:pt-40" x-data="{ open: false }">
+    <nav class="absolute bg-gray-800 top-0 left-0 right-0 h-20 sm:h-24 md:h-32">
+      <div class="container px-6 mx-auto md:max-w-6xl grid grid-cols-[auto,1fr,auto,auto,auto] items-center md:gap-12 h-full pt-[1vw]">
+        <a class="inline-flex text-2xl transform hover:-translate-y-[1px]" href="/">
+          <div class="text-gray-200">Lee</div>
+          <div class="text-blue-400 font-bold">Connelly</div>
+        </a>
+        <div class="inline-flex relative md:hidden col-start-5">
+          <button @click="open = !open">
+            <svg class="w-6 h-6 fill-gray-500 hover:fill-white" viewBox="0 0 24 24">
+              <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+            </svg>
+          </button>
+          <div x-show="open" @click.outside="open = false" class="absolute top-full right-0 px-8 mt-1 py-4 bg-white rounded shadow-lg grid gap-2">
+            <a class="tracking-wider hover:text-blue-400" href="#about">About</a>
+            <a class="tracking-wider hover:text-blue-400" href="#projects">Projects</a>
+            <a class="tracking-wider hover:text-blue-400" href="#contact">Contact</a>
+          </div>
+        </div>
+        <a class="hidden md:block font-semibold text-gray-400 tracking-wider hover:text-white col-start-3" href="#about">About</a>
+        <a class="hidden md:block font-semibold text-gray-400 tracking-wider hover:text-white" href="#projects">Projects</a>
+        <a class="hidden md:block font-semibold text-gray-400 tracking-wider hover:text-white" href="#contact">Contact</a>
+      </div>
+      <svg class="w-full h-[2vw] text-gray-800" width="2338" height="162" viewBox="0 0 2338 162" fill="none" preserveAspectRatio="none">
+        <path class="fill-[#63B3ED]" d="M2338 161.5H0L2338 0V161.5Z"></path>
+        <path class="fill-current" d="M0 0H2338L0 161V0Z"></path>
+      </svg>
+    </nav>
   </body>
 </html>
