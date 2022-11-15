@@ -1,14 +1,20 @@
 lockfileVersion: 5.4
 
 specifiers:
+  alpinejs: ^3.10.5
   autoprefixer: ^10.4.13
   postcss: ^8.4.19
+  prettier: ^2.7.1
+  prettier-plugin-tailwindcss: ^0.1.13
   tailwindcss: ^3.2.4
   vite: ^3.2.3
 
 dependencies:
+  alpinejs: 3.10.5
   autoprefixer: 10.4.13_postcss@8.4.19
   postcss: 8.4.19
+  prettier: 2.7.1
+  prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
   tailwindcss: 3.2.4_postcss@8.4.19
 
 devDependencies:
@@ -55,6 +61,16 @@ packages:
       fastq: 1.13.0
     dev: false
 
+  /@vue/reactivity/3.1.5:
+    resolution: {integrity: sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==}
+    dependencies:
+      '@vue/shared': 3.1.5
+    dev: false
+
+  /@vue/shared/3.1.5:
+    resolution: {integrity: sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA==}
+    dev: false
+
   /acorn-node/1.8.2:
     resolution: {integrity: sha512-8mt+fslDufLYntIoPAaIMUe/lrbrehIiwmR3t2k9LljIzoigEPF27eLk2hy8zSGzmR/ogr7zbRKINMo1u0yh5A==}
     dependencies:
@@ -72,6 +88,12 @@ packages:
     resolution: {integrity: sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+    dev: false
+
+  /alpinejs/3.10.5:
+    resolution: {integrity: sha512-qlvnal44Gof2XVfm/lef8fYpXKxR9fjdSki7aFB/9THyFvbsRKZ6lM5SjxXpIs7B0faJt7bgpK2K25gzrraXJw==}
+    dependencies:
+      '@vue/reactivity': 3.1.5
     dev: false
 
   /anymatch/3.1.2:
@@ -617,6 +639,21 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
+
+  /prettier-plugin-tailwindcss/0.1.13_prettier@2.7.1:
+    resolution: {integrity: sha512-/EKQURUrxLu66CMUg4+1LwGdxnz8of7IDvrSLqEtDqhLH61SAlNNUSr90UTvZaemujgl3OH/VHg+fyGltrNixw==}
+    engines: {node: '>=12.17.0'}
+    peerDependencies:
+      prettier: '>=2.2.0'
+    dependencies:
+      prettier: 2.7.1
+    dev: false
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: false
 
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
