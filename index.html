@@ -6,10 +6,10 @@
     <title>Lee Connelly - Web Developer</title>
     <script type="module" src="/main.js"></script>
   </head>
-  <body class="min-h-full antialiased text-gray-700 font-body" x-data="{ open: false }">
-    <nav class="absolute bg-gray-800 top-0 left-0 right-0 h-20 sm:h-24 md:h-32">
+  <body class="min-h-full antialiased text-gray-700 font-body tracking-wide" x-data="{ open: false }">
+    <nav class="bg-gray-800 top-0 left-0 right-0 h-20 sm:h-24 md:h-32">
       <div class="container px-6 mx-auto md:max-w-6xl grid grid-cols-[auto,1fr,auto,auto,auto] items-center md:gap-12 h-full pt-[1vw]">
-        <a class="inline-flex text-2xl transform hover:-translate-y-[1px]" href="/">
+        <a class="inline-flex text-2xl transform hover:-translate-y-[1px] tracking-normal" href="/">
           <div class="text-gray-200">Lee</div>
           <div class="text-blue-400 font-bold">Connelly</div>
         </a>
@@ -34,5 +34,14 @@
         <path class="fill-current" d="M0 0H2338L0 161V0Z"></path>
       </svg>
     </nav>
+
+    <header class="container px-6 pt-14 pb-12 mx-auto text-center md:max-w-3xl sm:text-left sm:py-16 md:pb-20 md:pt-24 lg:pt-32" id="about">
+      <h2 class="mb-2 text-base md:mb-5 lg:mb-9 sm:text-3xl md:text-4xl lg:text-5xl">About me</h2>
+      <p class="mb-3 text-lg sm:text-xl">Hi! My name is Lee Connelly. I am a web developer living in the UK. I build apps with Laravel and Vue, and make custom Wordpress websites.</p>
+      <p class="text-lg sm:text-xl">
+        You can view the code for this site on my github
+        <a class="text-lg font-bold text-blue-400 sm:text-xl" href="https://github.com/LeeConnelly12/portfolio">here</a>
+      </p>
+    </header>
   </body>
 </html>
