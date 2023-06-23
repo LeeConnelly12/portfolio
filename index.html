@@ -6,37 +6,37 @@
     <title>Lee Connelly - Web Developer</title>
     <script type="module" src="/main.js"></script>
   </head>
-  <body class="min-h-full antialiased text-gray-700 font-body tracking-wide" x-data="{ open: false }">
-    <nav class="bg-gray-800 top-0 left-0 right-0 h-20 sm:h-24 md:h-32">
-      <div class="container px-6 mx-auto md:max-w-6xl grid grid-cols-[auto,1fr,auto,auto,auto] items-center md:gap-12 h-full pt-[1vw]">
-        <a class="inline-flex text-2xl transform hover:-translate-y-[1px] tracking-normal" href="/">
+  <body class="font-body min-h-full tracking-wide text-gray-700 antialiased" x-data="{ open: false }">
+    <nav class="left-0 right-0 top-0 h-20 bg-gray-800 sm:h-24 md:h-32">
+      <div class="container mx-auto grid h-full grid-cols-[auto,1fr,auto,auto,auto] items-center px-6 pt-[1vw] md:max-w-6xl md:gap-12">
+        <a class="inline-flex transform text-2xl tracking-normal hover:-translate-y-[1px]" href="/">
           <div class="text-gray-200">Lee</div>
-          <div class="text-blue-400 font-bold">Connelly</div>
+          <div class="font-bold text-blue-400">Connelly</div>
         </a>
-        <div class="inline-flex relative md:hidden col-start-5">
+        <div class="relative col-start-5 inline-flex md:hidden">
           <button @click="open = !open">
-            <svg class="w-6 h-6 fill-gray-500 hover:fill-white" viewBox="0 0 24 24">
+            <svg class="h-6 w-6 fill-gray-500 hover:fill-white" viewBox="0 0 24 24">
               <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
             </svg>
           </button>
-          <div x-show="open" @click.outside="open = false" class="absolute top-full right-0 px-8 mt-1 py-4 bg-white rounded shadow-lg grid gap-2">
+          <div x-show="open" @click.outside="open = false" class="absolute right-0 top-full mt-1 grid gap-2 rounded bg-white px-8 py-4 shadow-lg">
             <a class="tracking-wider hover:text-blue-400" href="#about">About</a>
             <a class="tracking-wider hover:text-blue-400" href="#projects">Projects</a>
             <a class="tracking-wider hover:text-blue-400" href="#contact">Contact</a>
           </div>
         </div>
-        <a class="hidden md:block font-medium text-gray-400 tracking-wider hover:text-white col-start-3" href="#about">About</a>
-        <a class="hidden md:block font-medium text-gray-400 tracking-wider hover:text-white" href="#projects">Projects</a>
-        <a class="hidden md:block font-medium text-gray-400 tracking-wider hover:text-white" href="#contact">Contact</a>
+        <a class="col-start-3 hidden font-medium tracking-wider text-gray-400 hover:text-white md:block" href="#about">About</a>
+        <a class="hidden font-medium tracking-wider text-gray-400 hover:text-white md:block" href="#projects">Projects</a>
+        <a class="hidden font-medium tracking-wider text-gray-400 hover:text-white md:block" href="#contact">Contact</a>
       </div>
-      <svg class="w-full h-[2vw] text-gray-800" width="2338" height="162" viewBox="0 0 2338 162" fill="none" preserveAspectRatio="none">
+      <svg class="h-[2vw] w-full text-gray-800" width="2338" height="162" viewBox="0 0 2338 162" fill="none" preserveAspectRatio="none">
         <path class="fill-[#63B3ED]" d="M2338 161.5H0L2338 0V161.5Z"></path>
         <path class="fill-current" d="M0 0H2338L0 161V0Z"></path>
       </svg>
     </nav>
 
-    <header class="container px-6 pt-14 pb-12 mx-auto text-center md:max-w-3xl sm:text-left sm:py-16 md:pb-20 md:pt-24 lg:pt-32" id="about">
-      <h2 class="mb-2 text-base md:mb-5 lg:mb-9 sm:text-3xl md:text-4xl lg:text-5xl">About me</h2>
+    <header class="container mx-auto px-6 pb-12 pt-14 text-center sm:py-16 sm:text-left md:max-w-3xl md:pb-20 md:pt-24 lg:pt-32" id="about">
+      <h2 class="mb-2 text-base sm:text-3xl md:mb-5 md:text-4xl lg:mb-9 lg:text-5xl">About me</h2>
       <p class="mb-3 text-lg sm:text-xl">Hi! My name is Lee Connelly. I am a web developer living in the UK. I build apps with Laravel and Vue, and make custom Wordpress websites.</p>
       <p class="text-lg sm:text-xl">
         You can view the code for this site on my github
@@ -44,73 +44,73 @@
       </p>
     </header>
 
-    <main class="pt-10 pb-4 text-center bg-slate-200 sm:text-left sm:pt-16 md:pb-10 offset-anchor" id="projects">
-      <div class="container px-6 mx-auto md:max-w-3xl">
-        <h2 class="mb-2 text-base md:mb-5 lg:mb-9 sm:text-3xl md:text-4xl lg:text-5xl">Projects</h2>
+    <main class="offset-anchor bg-slate-200 pb-4 pt-10 text-center sm:pt-16 sm:text-left md:pb-10" id="projects">
+      <div class="container mx-auto px-6 md:max-w-3xl">
+        <h2 class="mb-2 text-base sm:text-3xl md:mb-5 md:text-4xl lg:mb-9 lg:text-5xl">Projects</h2>
         <p class="mb-6 text-lg sm:text-xl">These are some of the projects I have worked on.</p>
         <div class="lg:-mx-12">
-          <article class="mb-6 sm:mb-10 md:mb-12 rounded-sm md:rounded overflow-hidden text-white md:flex md:h-56 lg:h-64 bg-[#369ecc]">
-            <div class="md:w-1/2 md:pt-16 lg:pt-20 md:pr-0 md:pl-12">
+          <article class="mb-6 overflow-hidden rounded-sm bg-[#369ecc] text-white sm:mb-10 md:mb-12 md:flex md:h-56 md:rounded lg:h-64">
+            <div class="md:w-1/2 md:pl-12 md:pr-0 md:pt-16 lg:pt-20">
               <a class="block transform hover:-translate-y-[1px]" href="https://portal.atozinterpreting.com">
                 <img class="md:rounded-t md:shadow-2xl" alt="Login form for A to Z." srcset="/images/atoz.webp 360w, /images/atoz@2x.webp 720w" sizes="(min-width: 768px) 360px" />
               </a>
             </div>
-            <div class="px-6 pt-8 pb-6 text-left md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
+            <div class="px-6 pb-6 pt-8 text-left md:w-1/2 md:px-4 md:pb-16 md:pt-12 lg:px-12 lg:pt-16">
               <h2 class="text-xl font-bold lg:mb-2">A to Z</h2>
               <p class="text-sm opacity-75">A to Z is a web app where users can post documents they need translated. Interpreters can then accept and complete those jobs.</p>
             </div>
           </article>
-          <article class="mb-6 sm:mb-10 md:mb-12 rounded-sm md:rounded overflow-hidden text-white md:flex md:h-56 lg:h-64 bg-[#3b87c6]">
-            <div class="md:w-1/2 md:pt-16 lg:pt-20 md:pr-0 md:pl-12">
+          <article class="mb-6 overflow-hidden rounded-sm bg-[#3b87c6] text-white sm:mb-10 md:mb-12 md:flex md:h-56 md:rounded lg:h-64">
+            <div class="md:w-1/2 md:pl-12 md:pr-0 md:pt-16 lg:pt-20">
               <a class="block transform hover:-translate-y-[1px]" href="https://wayfinder.acquiredigital.com">
                 <img class="md:rounded-t md:shadow-2xl" alt="Login form for Wayfinder." srcset="/images/wayfinder.webp 360w, /images/wayfinder@2x.webp 720w" sizes="(min-width: 768px) 360px" />
               </a>
             </div>
-            <div class="px-6 pt-8 pb-6 text-left md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
+            <div class="px-6 pb-6 pt-8 text-left md:w-1/2 md:px-4 md:pb-16 md:pt-12 lg:px-12 lg:pt-16">
               <h2 class="text-xl font-bold lg:mb-2">Wayfinder CMS</h2>
               <p class="text-sm opacity-75">Wayfinder CMS allows users to edit interactive maps and publish data to an API for Kiosks to consume.</p>
             </div>
           </article>
-          <article class="mb-6 sm:mb-10 md:mb-12 rounded-sm md:rounded overflow-hidden text-white md:flex md:h-56 lg:h-64 bg-[#3e3166]">
-            <div class="md:w-1/2 md:pt-16 lg:pt-20 md:pr-0 md:pl-12">
+          <article class="mb-6 overflow-hidden rounded-sm bg-[#e54820] text-white sm:mb-10 md:mb-12 md:flex md:h-56 md:rounded lg:h-64">
+            <div class="md:w-1/2 md:pl-12 md:pr-0 md:pt-16 lg:pt-20">
+              <a class="block transform hover:-translate-y-[1px]" href="https://app.wearepatchworks.com/login">
+                <img class="md:rounded-t md:shadow-2xl" alt="Login page for the Patchworks dashboard." srcset="/images/patchworks.webp 360w, /images/patchworks@2x.webp 720w" sizes="(min-width: 768px) 360px" />
+              </a>
+            </div>
+            <div class="px-6 pb-6 pt-8 text-left md:w-1/2 md:px-4 md:pb-16 md:pt-12 lg:px-12 lg:pt-16">
+              <h2 class="text-xl font-bold lg:mb-2">Patchworks</h2>
+              <p class="text-sm opacity-75">Patchworks is an IPAAS that allows companies to automate data syncing between systems such as Shopify or Ebay.</p>
+            </div>
+          </article>
+          <article class="mb-6 overflow-hidden rounded-sm bg-[#3e3166] text-white sm:mb-10 md:mb-12 md:flex md:h-56 md:rounded lg:h-64">
+            <div class="md:w-1/2 md:pl-12 md:pr-0 md:pt-16 lg:pt-20">
               <a class="block transform hover:-translate-y-[1px]" href="https://wearestadium.com">
                 <img class="md:rounded-t md:shadow-2xl" alt="Homepage for the Stadium website." srcset="/images/stadium.webp 360w, /images/stadium@2x.webp 720w" sizes="(min-width: 768px) 360px" />
               </a>
             </div>
-            <div class="px-6 pt-8 pb-6 text-left md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
+            <div class="px-6 pb-6 pt-8 text-left md:w-1/2 md:px-4 md:pb-16 md:pt-12 lg:px-12 lg:pt-16">
               <h2 class="text-xl font-bold lg:mb-2">Stadium</h2>
               <p class="text-sm opacity-75">Stadium is a Wordpress website that was part of a client's rebranding process.</p>
             </div>
           </article>
-          <article class="mb-6 sm:mb-10 md:mb-12 rounded-sm md:rounded overflow-hidden text-white md:flex md:h-56 lg:h-64 bg-[#248939]">
-            <div class="md:w-1/2 md:pt-16 lg:pt-20 md:pr-0 md:pl-12">
+          <article class="mb-6 overflow-hidden rounded-sm bg-[#248939] text-white sm:mb-10 md:mb-12 md:flex md:h-56 md:rounded lg:h-64">
+            <div class="md:w-1/2 md:pl-12 md:pr-0 md:pt-16 lg:pt-20">
               <a class="block transform hover:-translate-y-[1px]" href="https://www.gasdata.co.uk">
                 <img class="md:rounded-t md:shadow-2xl" alt="Homepage for the Gasdata website." srcset="/images/gasdata.webp 360w, /images/gasdata@2x.webp 720w" sizes="(min-width: 768px) 360px" />
               </a>
             </div>
-            <div class="px-6 pt-8 pb-6 text-left md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
+            <div class="px-6 pb-6 pt-8 text-left md:w-1/2 md:px-4 md:pb-16 md:pt-12 lg:px-12 lg:pt-16">
               <h2 class="text-xl font-bold lg:mb-2">Gas Data</h2>
               <p class="text-sm opacity-75">Gas Data is a Wordpress website. The client wanted a more modern and responsive website along with some animations.</p>
             </div>
           </article>
-          <article class="mb-6 sm:mb-10 md:mb-12 rounded-sm md:rounded overflow-hidden text-white md:flex md:h-56 lg:h-64 bg-[#3716a4]">
-            <div class="md:w-1/2 md:pt-16 lg:pt-20 md:pr-0 md:pl-12">
-              <a class="block transform hover:-translate-y-[1px]" href="https://clubglobal.com">
-                <img class="md:rounded-t md:shadow-2xl" alt="Homepage for the Clubglobal website." srcset="/images/clubglobal.webp 360w, /images/clubglobal@2x.webp 720w" sizes="(min-width: 768px) 360px" />
-              </a>
-            </div>
-            <div class="px-6 pt-8 pb-6 text-left md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
-              <h2 class="text-xl font-bold lg:mb-2">Club Global</h2>
-              <p class="text-sm opacity-75">Club Global is an app where users can book tables or buy tickets for events at clubs.</p>
-            </div>
-          </article>
-          <article class="mb-6 sm:mb-10 md:mb-12 rounded-sm md:rounded overflow-hidden text-white md:flex md:h-56 lg:h-64 bg-[#043d37]">
-            <div class="md:w-1/2 md:pt-16 lg:pt-20 md:pr-0 md:pl-12">
+          <article class="mb-6 overflow-hidden rounded-sm bg-[#043d37] text-white sm:mb-10 md:mb-12 md:flex md:h-56 md:rounded lg:h-64">
+            <div class="md:w-1/2 md:pl-12 md:pr-0 md:pt-16 lg:pt-20">
               <a class="block transform hover:-translate-y-[1px]" href="https://plenishdrinks.com">
                 <img class="md:rounded-t md:shadow-2xl" alt="Homepage for the Plenish website." srcset="/images/plenish.webp 360w, /images/plenish@2x.webp 720w" sizes="(min-width: 768px) 360px" />
               </a>
             </div>
-            <div class="px-6 pt-8 pb-6 text-left md:w-1/2 md:px-4 lg:px-12 md:pt-12 lg:pt-16 md:pb-16">
+            <div class="px-6 pb-6 pt-8 text-left md:w-1/2 md:px-4 md:pb-16 md:pt-12 lg:px-12 lg:pt-16">
               <h2 class="text-xl font-bold lg:mb-2">Plenish</h2>
               <p class="text-sm opacity-75">Plenish is a company that sells healthy plant-based drinks. The website was built using Wordpress and Woocommerce.</p>
             </div>
@@ -119,8 +119,8 @@
       </div>
     </main>
 
-    <footer class="container px-6 pt-6 pb-8 mx-auto text-center md:max-w-3xl md:pt-12 sm:pb-10 md:pb-12 lg:pb-16 offset-anchor" id="contact">
-      <h2 class="mb-2 text-base md:mb-5 lg:mb-9 sm:text-3xl md:text-4xl lg:text-5xl">Contact</h2>
+    <footer class="offset-anchor container mx-auto px-6 pb-8 pt-6 text-center sm:pb-10 md:max-w-3xl md:pb-12 md:pt-12 lg:pb-16" id="contact">
+      <h2 class="mb-2 text-base sm:text-3xl md:mb-5 md:text-4xl lg:mb-9 lg:text-5xl">Contact</h2>
       <p class="mb-1 text-lg sm:text-xl">Have a question or want to work together?</p>
       <p class="mb-1 text-lg sm:text-xl">You can email me at</p>
       <a class="text-lg font-bold text-blue-400 sm:text-xl" href="mailto:lee@leeconnelly.dev">lee@leeconnelly.dev</a>
